@@ -104,7 +104,8 @@ if(NUM_LOOPS>=10)    {
 	    }}
 	    break;
     }
-    return 0;}
+    return 0;
+}
 
 ```
 
@@ -112,10 +113,66 @@ if(NUM_LOOPS>=10)    {
 
 ## OUTPUT
 $ ./sem.o 
-
+```
+localhost:~# gcc -o sem.o sem.c -lrt
+localhost:~# ./sem.o
+semaphore set created, semaphore set id '0'.
+producer: '0'
+consumer: '0'
+consumer: '1'
+consumer: '2'
+consumer: '3'
+consumer: '4'
+consumer: '5'
+consumer: '6'
+consumer: '7'
+consumer: '8'
+consumer: '9'
+consumer: '10'
+consumer: '11'
+consumer: '12'
+consumer: '13'
+consumer: '14'
+consumer: '15'
+consumer: '16'
+consumer: '17'
+consumer: '18'
+consumer: '19'
+producer: '1'
+producer: '2'
+producer: '3'
+producer: '4'
+producer: '5'
+producer: '6'
+producer: '7'
+producer: '8'
+producer: '9'
+producer: '10'
+producer: '11'
+producer: '12'
+producer: '13'
+producer: '14'
+producer: '15'
+producer: '16'
+producer: '17'
+producer: '18'
+producer: '19'
+```
 
 $ ipcs
-
+```
+localhost:~# ipcs
+ 
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages
+ 
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status
+ 
+------ Semaphore Arrays --------
+key        semid      owner      perms      nsems
+ 
+```
 
 
 
